@@ -1,0 +1,14 @@
+<button
+  mat-icon-button
+  *ngFor="let i of ratingArr"
+  (click)="!readOnly ? onClick(i) : null"
+>
+  <mat-icon>
+    {{ showIcon(i) }}
+  </mat-icon>
+</button>
+
+<p class="body-2">
+  Your rated <span class="body-2">{{ rating }}</span> /
+  <span class="body-2">{{ starCount }}</span>
+</p>

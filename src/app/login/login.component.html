@@ -1,0 +1,47 @@
+<div class="container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title class="title">
+        {{ 'LOGIN_TITLE' | translate }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form
+        class="login-form"
+        [formGroup]="loginFormGroup"
+        (ngSubmit)="onSubmit()"
+      >
+        <mat-form-field class="form-field" appearance="outline">
+          <input
+            matInput
+            type="email"
+            placeholder="Email"
+            formControlName="email"
+          />
+          <mat-error> {{ 'LOGIN_EMAIL_ERROR' | translate }} </mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <input
+            matInput
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <mat-error> {{ 'LOGIN_PASSWORD_ERROR' | translate }}</mat-error>
+        </mat-form-field>
+        <div class="test" mat-dialog-actions>
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!loginFormGroup.valid"
+          >
+            {{ 'LOGIN_BUTTON' | translate }}
+          </button>
+        </div>
+      </form>
+      <a style="color: #fff; margin-top: 10px" routerLink="/signup">
+        {{ 'REGISTER_HYPERLINK' | translate }}</a
+      >
+    </mat-card-content>
+  </mat-card>
+</div>

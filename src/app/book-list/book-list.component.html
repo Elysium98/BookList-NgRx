@@ -1,0 +1,29 @@
+<h2 class="title">{{ 'BOOKS_TITLE' | translate }}</h2>
+<div class="logout">
+  <p *ngIf="user$ | async as user">
+    {{ 'WELCOME_USER' | translate }} {{ user.email }}
+  </p>
+  <button mat-button (click)="openDialog()">
+    <mat-icon>exit_to_app</mat-icon>
+    {{ 'LOGOUT_BUTTON' | translate }}
+  </button>
+</div>
+<div>
+  <div class="main-body">
+    <div class="book-item" *ngFor="let book of books$ | async; let i = index">
+      <p>{{ book.volumeInfo.title | translate }}</p>
+
+      <button (click)="getBook(book.id)" data-test="add-button">
+        {{ 'DETAIL_BUTTON' | translate }}
+      </button>
+
+      <app-star [readOnly]="true" [rating]="book.ratingStar"></app-star>
+    </div>
+  </div>
+  <div class="book-detail" *ngIf="book$ | async">
+    <app-book-detail
+      [bookToShow]="book$ | async"
+      (updatedBook)="onBookUpdated($event)"
+    ></app-book-detail>
+  </div>
+</div>

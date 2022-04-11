@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{ 'TITLE_CONFIRM_DIALOG' | translate }}</h1>
+<div mat-dialog-actions>
+  <button mat-button cdkFocusInitial (click)="goToLogin()">
+    {{ 'YES_CONFIRM_DIALOG' | translate }}
+  </button>
+  <button mat-button (click)="onNoClick()">
+    {{ 'NO_CONFIRM_DIALOG' | translate }}
+  </button>
+</div>

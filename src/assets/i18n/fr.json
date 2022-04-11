@@ -1,0 +1,40 @@
+{
+  "LOGIN_TITLE": "Connexion",
+  "REGISTER_TITLE": "S'inscrire",
+  "BOOKS_TITLE": "Livres",
+  "LOGIN_EMAIL_ERROR": "Veuillez fournir une adresse e-mail correcte",
+  "LOGIN_PASSWORD_ERROR": "Veuillez fournir un mot de passe correct",
+  "SIGNUP_EMAIL_ERROR": "Veuillez fournir une adresse email valide",
+  "SIGNUP_PASSWORD_ERROR": " Veuillez fournir un mot de passe valide",
+  "SELECT": "Changer de langue",
+  "LOGIN_BUTTON": "Connexion",
+  "REGISTER_BUTTON": "S'inscrire",
+  "ABOUT_BUTTON": "Sur",
+  "LOGOUT_BUTTON": "Se déconnecter",
+  "DETAIL_BUTTON": "Des détails",
+  "REGISTER_HYPERLINK": "Cliquez pour vous inscrire !",
+  "LOGIN_HYPERLINK": "Déjà enregistré? Cliquez pour vous connecter",
+  "WELCOME_USER": "Bienvenue ",
+  "TITLE_CONFIRM_DIALOG": "Êtes-vous sûr ?",
+  "YES_CONFIRM_DIALOG": "Oui",
+  "NO_CONFIRM_DIALOG": "Non merci",
+  "BOOK_1": {
+    "TITLE": "Étoile du soir",
+    "AUTHOR": "Mihai Eminescu",
+    "PUBLISHER": "Humanitas SA"
+  },
+  "BOOK_2": {
+    "TITLE": "Contes de fées",
+    "AUTHOR": "Petre Ispirescu",
+    "PUBLISHER": "Humanitas SA"
+  },
+  "BOOK_3": {
+    "TITLE": "Des pas vers l'éternité",
+    "AUTHOR": "Istrati Toma",
+    "PUBLISHER": "Humanitas SA"
+  },
+  "BOOK_DETAIL_TITLE": "Des détails",
+  "BOOK_DETAIL_AUTHOR": "Auteur",
+  "BOOK_DETAIL_PUBLISHER": "Éditeur",
+  "BOOK_DETAIL_PUBLISHERDATE": "Date de l'éditeur"
+}

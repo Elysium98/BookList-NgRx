@@ -1,0 +1,40 @@
+{
+  "LOGIN_TITLE": "Log In",
+  "REGISTER_TITLE": "Register",
+  "BOOKS_TITLE": "Books",
+  "LOGIN_EMAIL_ERROR": "Please provide a correct email address",
+  "LOGIN_PASSWORD_ERROR": "Please provide a correct password",
+  "SIGNUP_EMAIL_ERROR": "Please provide a valid email address",
+  "SIGNUP_PASSWORD_ERROR": " Please provide a valid password",
+  "SELECT": "Change language",
+  "LOGIN_BUTTON": "Login",
+  "REGISTER_BUTTON": "Register",
+  "ABOUT_BUTTON": "About",
+  "LOGOUT_BUTTON": "Logout",
+  "DETAIL_BUTTON": "Details",
+  "REGISTER_HYPERLINK": "Click to Register !",
+  "LOGIN_HYPERLINK": "Already registered? Click to Login",
+  "WELCOME_USER": "Welcome",
+  "TITLE_CONFIRM_DIALOG": "Are you sure ?",
+  "YES_CONFIRM_DIALOG": "Yes",
+  "NO_CONFIRM_DIALOG": "No thanks",
+  "BOOK_1": {
+    "TITLE": "Luceafarul",
+    "AUTHOR": "Mihai Eminescu",
+    "PUBLISHER": "Humanitas SA"
+  },
+  "BOOK_2": {
+    "TITLE": "Basme",
+    "AUTHOR": "Petre Ispirescu",
+    "PUBLISHER": "Humanitas SA"
+  },
+  "BOOK_3": {
+    "TITLE": "Pasi spre vesnicie",
+    "AUTHOR": "Istrati Toma",
+    "PUBLISHER": "Humanitas SA"
+  },
+  "BOOK_DETAIL_TITLE": "Details",
+  "BOOK_DETAIL_AUTHOR": "Author",
+  "BOOK_DETAIL_PUBLISHER": "Publisher",
+  "BOOK_DETAIL_PUBLISHERDATE": "PublisherDate"
+}

@@ -1,0 +1,17 @@
+.main-body {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.book-item {
+  min-width: 25rem;
+}
+
+.book-detail {
+  margin-top: 2%;
+}
+.logout {
+  margin-left: 1300px;
+}

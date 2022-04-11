@@ -1,0 +1,64 @@
+<h2 class="title-detail" *ngIf="bookToShow">
+  {{ 'BOOK_DETAIL_TITLE' | translate }}
+</h2>
+<div class="container">
+  <div class="book-item" *ngIf="bookToShow">
+    <div class="row">
+      <div class="col-md-4">{{ 'BOOK_DETAIL_AUTHOR' | translate }}:</div>
+      <div class="col-md-8">
+        {{ bookToShow.volumeInfo.author | translate }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">{{ 'BOOK_DETAIL_PUBLISHER' | translate }}:</div>
+      <div class="col-md-8">
+        {{ bookToShow.volumeInfo.publisher | translate }}
+      </div>
+    </div>
+
+    <form [formGroup]="dataFormGroup" (ngSubmit)="onSubmit(bookToShow)">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>{{ 'BOOK_DETAIL_PUBLISHERDATE' | translate }}</mat-label>
+        <input
+          matInput
+          type="date"
+          [value]="bookToShow.volumeInfo.publisherDate"
+          formControlName="date"
+        />
+      </mat-form-field>
+
+      <!-- <button (click)="saveRating(bookToShow)" data-test="add-button">
+      Save Rating
+    </button> -->
+      <button type="submit" class="add-button" data-test="add-button">
+        Save
+      </button>
+    </form>
+
+    <app-star
+      [rating]="bookToShow.ratingStar"
+      (ratingUpdated)="onRatingUpdated($event)"
+    ></app-star>
+
+    <div class="row">
+      <div class="col-md-4">Language:</div>
+      <div class="col-md-8">
+        {{ bookToShow.volumeInfo.language }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">Volume:</div>
+      <div class="col-md-8">
+        {{ bookToShow.volumeInfo.volume }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">Page numbers:</div>
+      <div class="col-md-8">
+        {{ bookToShow.volumeInfo.pageNumber }}
+      </div>
+    </div>
+  </div>
+</div>

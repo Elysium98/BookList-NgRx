@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "volumeInfo":{
+            "title":"Luceafarul",
+            "author":"Mihai Eminescu",
+            "publisher": "Humanitas SA",
+            "publisherDate": "2016-01-27"
+        },
+        "ratingStar": 3
+    },
+    {
+            "id": "2",
+            "volumeInfo":{
+                "title":"Basme",
+                "author":"Petre Ispirescu",
+                "publisher": "Humanitas SA",
+                "publisherDate": "2020-01-999"
+            },
+            "ratingStar": 4
+    },
+    {
+        "id": "3",
+        "volumeInfo":{
+            "title":"Pasi spre vesnicie",
+            "author":"Istrati Toma",
+            "publisher": "Humanitas SA",
+            "publisherDate": "2020-01-27"
+        },
+        "ratingStar": 5
+    }
+]
+
+
