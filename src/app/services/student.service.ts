@@ -5,7 +5,7 @@ import i18next from 'i18next';
 
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { IBook } from '../models/books.model';
+import { IBook } from '../models/book.model';
 import { IStudent } from '../models/student.model';
 
 @Injectable({ providedIn: 'root' })

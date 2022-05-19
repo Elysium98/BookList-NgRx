@@ -1,34 +1,93 @@
 [
-    {
-        "id": "1",
-        "volumeInfo":{
-            "title":"Luceafarul",
-            "author":"Mihai Eminescu",
-            "publisher": "Humanitas SA",
-            "publisherDate": "2016-01-27"
-        },
-        "ratingStar": 3
+  {
+    "id": "1",
+    "volumeInfo": {
+      "title": "BOOK_1.TITLE",
+      "author": "BOOK_1.AUTHOR",
+      "publisher": "BOOK_1.PUBLISHER",
+      "publisherDate": "2016-01-27",
+      "language": "RO",
+      "volume": 2,
+      "pageNumber": 333
     },
-    {
-            "id": "2",
-            "volumeInfo":{
-                "title":"Basme",
-                "author":"Petre Ispirescu",
-                "publisher": "Humanitas SA",
-                "publisherDate": "2020-01-999"
-            },
-            "ratingStar": 4
+    "ratingStar": 3
+  },
+  {
+    "id": "2",
+    "volumeInfo": {
+      "title": "BOOK_2.TITLE",
+      "author": "BOOK_2.AUTHOR",
+      "publisher": "BOOK_2.PUBLISHER",
+      "publisherDate": "2020-01-19",
+      "language": "RO",
+      "volume": 2,
+      "pageNumber": 333
     },
-    {
-        "id": "3",
-        "volumeInfo":{
-            "title":"Pasi spre vesnicie",
-            "author":"Istrati Toma",
-            "publisher": "Humanitas SA",
-            "publisherDate": "2020-01-27"
-        },
-        "ratingStar": 5
-    }
+    "ratingStar": 4
+  },
+  {
+    "id": "3",
+    "volumeInfo": {
+      "title": "BOOK_3.TITLE",
+      "author": "BOOK_3.AUTHOR",
+      "publisher": "BOOK_3.PUBLISHER",
+      "publisherDate": "2020-01-27",
+      "language": "RO",
+      "volume": 2,
+      "pageNumber": 333
+    },
+    "ratingStar": 5
+  },
+  {
+    "id": "4",
+    "volumeInfo": {
+      "title": "Capra cu trei iezi",
+      "author": "Ion Creanga",
+      "publisher": "Humanitas",
+      "publisherDate": "2019-01-27",
+      "language": "RO",
+      "volume": 2,
+      "pageNumber": 333
+    },
+    "ratingStar": 5
+  },
+  {
+    "id": "4",
+    "volumeInfo": {
+      "title": "Capra cu trei iezi",
+      "author": "Ion Creanga",
+      "publisher": "Humanitas",
+      "publisherDate": "2019-01-27",
+      "language": "RO",
+      "volume": 2,
+      "pageNumber": 333
+    },
+    "ratingStar": 5
+  },
+  {
+    "id": "4",
+    "volumeInfo": {
+      "title": "Capra cu trei iezi",
+      "author": "Ion Creanga",
+      "publisher": "Humanitas",
+      "publisherDate": "2019-01-27",
+      "language": "RO",
+      "volume": 2,
+      "pageNumber": 333
+    },
+    "ratingStar": 5
+  },
+  {
+    "id": "4",
+    "volumeInfo": {
+      "title": "Capra cu trei iezi",
+      "author": "Ion Creanga",
+      "publisher": "Humanitas",
+      "publisherDate": "2019-01-27",
+      "language": "RO",
+      "volume": 2,
+      "pageNumber": 333
+    },
+    "ratingStar": 5
+  }
 ]
-
-

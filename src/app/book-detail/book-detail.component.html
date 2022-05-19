@@ -1,18 +1,18 @@
-<h2 class="title-detail" *ngIf="bookToShow">
+<h2 class="title-detail">
   {{ 'BOOK_DETAIL_TITLE' | translate }}
 </h2>
 <div class="container">
-  <div class="book-item" *ngIf="bookToShow">
+  <div class="book-item" *ngIf="book$ | async as book">
     <div class="row">
       <div class="col-md-4">{{ 'BOOK_DETAIL_AUTHOR' | translate }}:</div>
       <div class="col-md-8">
-        {{ bookToShow.volumeInfo.author | translate }}
+        {{ book.volumeInfo.author | translate }}
       </div>
     </div>
     <div class="row">
       <div class="col-md-4">{{ 'BOOK_DETAIL_PUBLISHER' | translate }}:</div>
       <div class="col-md-8">
-        {{ bookToShow.volumeInfo.publisher | translate }}
+        {{ book.volumeInfo.publisher | translate }}
       </div>
     </div>
 

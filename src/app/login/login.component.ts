@@ -2,10 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { IUser } from '../models/user.model';
 import { UserService } from '../services/user.service';
-
+import * as UserActions from '../store/actions/user.actions';
+import { getCurrentUser } from '../store/selectors/user.selectors';
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -18,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private store: Store
   ) {}
 
   ngOnInit() {
@@ -36,16 +39,16 @@ export class LoginComponent implements OnInit {
           user.password === this.loginFormGroup.value.password
         );
       });
-      console.log('User at login', typeof user);
-      this.userService.setCurrentUser(user);
+
       if (user) {
         sessionStorage.setItem('user', JSON.stringify(user));
+
+        this.store.dispatch(UserActions.setCurrentUser({ user }));
 
         this.router.navigate(['/bookList']);
         this.loginFormGroup.reset();
       } else {
         sessionStorage.setItem('user', null);
-        // JSON.parse(sessionStorage.getItem('user'));
 
         alert('user not found !');
       }

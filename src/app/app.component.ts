@@ -1,18 +1,9 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { IBook } from './models/books.model';
-import { BooksService } from './services/books.service';
-import {
-  addBook,
-  removeBook,
-  retrievedBookList,
-  showDetail,
-} from './store/actions/books.action';
-import {
-  selectBookCollection,
-  selectBooks,
-  selectDetail,
-} from './store/selectors/books.selectors';
+import { IBook } from './models/book.model';
+import { BooksService } from './services/book.service';
+
+import {} from './store/selectors/book.selectors';
 import { TranslateService } from '@ngx-translate/core';
 import { UserService } from './services/user.service';
 import { IUser } from './models/user.model';
@@ -28,24 +19,9 @@ import { tap } from 'rxjs';
 export class AppComponent {
   title = 'book-list';
 
-  books$ = this.store.select(selectBooks);
-  booksDetails$ = this.store.select(selectDetail);
-  bookCollection$ = this.store.select(selectBookCollection);
   errorMessage: any;
   books: IBook[] = [];
   users: any = [];
-
-  onAdd(bookId: string) {
-    this.store.dispatch(addBook({ bookId }));
-  }
-
-  onRemove(bookId: string) {
-    this.store.dispatch(removeBook({ bookId }));
-  }
-
-  onDetail(bookId: string) {
-    this.store.dispatch(showDetail({ bookId }));
-  }
 
   constructor(
     private booksService: BooksService,

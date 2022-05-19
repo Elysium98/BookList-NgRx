@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import i18next from 'i18next';
 
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
-import { IBook } from '../models/books.model';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+import { IBook } from '../models/book.model';
 
 @Injectable({ providedIn: 'root' })
 export class BooksService {
@@ -106,7 +106,18 @@ export class BooksService {
   private _booksSubject = new BehaviorSubject<IBook[]>(this.books);
   books$ = this._booksSubject.asObservable();
 
+  booksUrl = 'api/books.json'
+
+
   constructor(private http: HttpClient) {}
+
+  // getBooks(): Observable<IBook[]> {
+  //   return this.http.get<IBook[]>(this.booksUrl)
+  //     .pipe(
+  //       tap(data => console.log(JSON.stringify(data))),
+  //       catchError(this.handleError)
+  //     );
+  // }
 
   getBooks$(): Observable<IBook[]> {
     return this._booksSubject;
@@ -127,5 +138,22 @@ export class BooksService {
       return x;
     });
     this._booksSubject.next(result);
+  }
+
+
+  private handleError(err: any) {
+    // in a real world app, we may send the server to some remote logging infrastructure
+    // instead of just logging it to the console
+    let errorMessage: string;
+    if (err.error instanceof ErrorEvent) {
+      // A client-side or network error occurred. Handle it accordingly.
+      errorMessage = `An error occurred: ${err.error.message}`;
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong,
+      errorMessage = `Backend returned code ${err.status}: ${err.body.error}`;
+    }
+    console.error(err);
+    return throwError(errorMessage);
   }
 }
